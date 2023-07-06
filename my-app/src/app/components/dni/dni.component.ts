@@ -12,11 +12,11 @@ export class DniComponent implements OnInit {
 //para cada etiqueta/instancia, no cambia
 static readonly SECUENCIA_LETRAS_DNI:string = "TRWAGMYFPDXBNJZSQVHLCKE";
 
-numdni:string;
+dni:string;
 letra:string;
 
   constructor() { 
-    this.numdni='';
+    this.dni='';
     this.letra='';
   }
 
@@ -39,14 +39,14 @@ letra:string;
     if (inputSeleccionado.value!="sin") 
     {
       //estoy en el caso extranjero , recalculo el dni
-       let dnistrin:string = inputSeleccionado.value + this.numdni;
+       let dnistrin:string = inputSeleccionado.value + this.dni;
        numdni = parseInt(dnistrin);
     } 
     else
     {
-      numdni = parseInt(this.numdni);
+      numdni = parseInt(this.dni);
     }
-    console.log(`El número introducido es  ${this.numdni}`);
+    console.log(`El número introducido es  ${this.dni}`);
     //Integer numero = java
     let resto:number =  numdni%23;
     this.letra = DniComponent.SECUENCIA_LETRAS_DNI.charAt(resto);
