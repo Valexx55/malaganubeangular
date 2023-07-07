@@ -14,10 +14,12 @@ static readonly SECUENCIA_LETRAS_DNI:string = "TRWAGMYFPDXBNJZSQVHLCKE";
 
 dni:string;
 letra:string;
+titulo:string;
 
   constructor() { 
     this.dni='';
     this.letra='';
+    this.titulo = 'CALCULE SU LETRA DE DNI';
   }
 
   //TODO: completar el ejercicio, para que funcione
