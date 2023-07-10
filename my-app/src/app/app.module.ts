@@ -9,6 +9,7 @@ import { PerroComponent } from './components/perro/perro.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CadenaComponent } from './components/cadena/cadena.component';
+import { ChuckComponent } from './components/chuck/chuck.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CadenaComponent } from './components/cadena/cadena.component';
     AdivinaComponent,
     DniComponent,
     PerroComponent,
-    CadenaComponent
+    CadenaComponent,
+    ChuckComponent
   ],
   imports: [
     BrowserModule,
