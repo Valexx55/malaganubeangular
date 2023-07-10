@@ -122,5 +122,10 @@ static readonly SECUENCIA_LETRAS_DNI:string = "TRWAGMYFPDXBNJZSQVHLCKE";
       }
     )*/
   }      
+
+  ordenarPorLetra(): void{
+    this.listaDnis.sort((dni1Letra, dni2Letra) =>
+     { return dni1Letra.letra.localeCompare(dni2Letra.letra);});
+  }
   
 }
