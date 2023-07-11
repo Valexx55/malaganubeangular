@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CadenaComponent } from './components/cadena/cadena.component';
 import { ChuckComponent } from './components/chuck/chuck.component';
+import { CdTimerModule } from 'angular-cd-timer';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ChuckComponent } from './components/chuck/chuck.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CdTimerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
