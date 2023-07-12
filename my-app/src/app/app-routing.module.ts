@@ -6,6 +6,7 @@ import { PerroComponent } from './components/perro/perro.component';
 import { CadenaComponent } from './components/cadena/cadena.component';
 import { ChuckComponent } from './components/chuck/chuck.component';
 import { RestaurantesComponent } from './components/restaurantes/restaurantes.component';
+import { FormularioRestauranteComponent } from './components/formulario-restaurante/formulario-restaurante.component';
 
 //en este array de rutas, tengo que tener una ruta path
 //asociado al componente 
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:"perros", component: PerroComponent},
   {path:"cadena", component: CadenaComponent},
   {path:"chuck", component: ChuckComponent},
-  {path:"restaurantes", component:RestaurantesComponent}
+  {path:"restaurantes", component:RestaurantesComponent}, 
+  {path:"restaurantes/nuevo" , component: FormularioRestauranteComponent}
 ];
 
 @NgModule({
