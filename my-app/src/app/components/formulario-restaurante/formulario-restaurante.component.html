@@ -20,12 +20,11 @@
       <br>
       <!--TODO: MODIFICAR EL BARRIO POR UN DESPLEGABLE/SELECT-->
       <div class="form-group">
-        <label for="barrio">Barrio</label>
-        <input type="text" #barrio="ngModel" [(ngModel)]="restaurante.barrio" class="form-control" id="barrio" name="barrio" placeholder="Intro barrio" required>
-        <!-- definimos una sección de error, que muestre el mensaje si el campo no se valida -->
-        <div class="alert alert-danger" [hidden]="barrio.pristine||barrio.valid">
-            Barrio obligatorio
-        </div>
+        <label for="nbarrio">Barrio</label>
+        <select [(ngModel)]="restaurante.barrio" name="nbarrio" id="nbarrio" class="form-control" title="listaBarrios">
+            <option *ngFor="let barrio of barrios" value="{{barrio}}">{{barrio}}</option>
+        </select>
+       
       </div>
       <br>
     
@@ -89,7 +88,7 @@
       <br>
       <div class="form-group">
         <label for="especialidad3">Especialidad 3</label>
-        <input type="text" #especialidad3="ngModel" [(ngModel)]="restaurante.especialidad3" class="form-control" id="especialidad3" name="especialidad1" placeholder="Especialidad 3">
+        <input type="text" #especialidad3="ngModel" [(ngModel)]="restaurante.especialidad3" class="form-control" id="especialidad3" name="especialidad3" placeholder="Especialidad 3">
       </div>
     <br>
 
