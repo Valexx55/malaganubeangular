@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Restaurante } from 'src/app/models/restaurante';
 import { RestauranteService } from 'src/app/services/restaurante.service';
 
@@ -15,7 +16,8 @@ export class FormularioRestauranteComponent implements OnInit {
 
   barrios:Array<String>
 
-  constructor(private restauranteService : RestauranteService) {
+  //el servicio ROuter me permite navegar programáticamente - no por enlance - 
+  constructor(private restauranteService : RestauranteService, private servicioRutas:Router) {
     this.restaurante = new Restaurante();
 
     this.restaurante.nombre="El Cateto";
@@ -71,6 +73,9 @@ export class FormularioRestauranteComponent implements OnInit {
       },
       next: restauranteNuevo => {
         alert(`Restaurante insertado correctamente con id ${restauranteNuevo.id}`);
+        //automáticamente, tras el post exitosos, 
+        //redirijo al usuario al listado
+        this.servicioRutas.navigateByUrl("/restaurantes");
       }
     }
     );

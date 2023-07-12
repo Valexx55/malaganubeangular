@@ -35,5 +35,10 @@ export class RestaurantesComponent implements OnInit {
     );
   }
 
+  borrarRestaurante()
+  {
+    //TODO: obtener el id del restaurante y hacer el delete
+    console.log("quiere borrar el resutarante");
+  }
 
 }
