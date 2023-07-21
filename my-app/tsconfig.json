@@ -2,7 +2,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-   // "strictNullChecks": false,
+   "strictNullChecks": false,//me permite declarar una variable sin inicializarla
+   "noImplicitAny": false,//me permite delcarar variables sin tipo (como en JS)
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

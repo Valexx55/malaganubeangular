@@ -20,4 +20,15 @@
       </div>
     </div>
   </div>
+  <!--aquí va la mpaginación -->
+  <mat-paginator [length]="totalRegistros"
+              [pageSize]="totalPorPagina"
+              [pageSizeOptions]="opcionesTamanio"
+              [pageIndex]="paginaActual"
+              aria-label="Select page"
+              showFirstLastButtons
+              (page)="paginar($event)">
+</mat-paginator>
+
 </div>  
+

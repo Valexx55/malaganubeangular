@@ -91,6 +91,12 @@
         <input type="text" #especialidad3="ngModel" [(ngModel)]="restaurante.especialidad3" class="form-control" id="especialidad3" name="especialidad3" placeholder="Especialidad 3">
       </div>
     <br>
+    <div class="form-group">
+      <label for="foto">Foto</label>
+      <input type="file" (change)="seleccionarFoto($event)" class="form-control" id="foto" name="foto">   
+
+  </div>
+  <br>
 
     <button type="submit" class="btn btn-primary">CREAR</button>
   </form>
